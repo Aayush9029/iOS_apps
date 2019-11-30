@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="encrypt_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1I-bu-YHc" userLabel="formField">
+                                <rect key="frame" x="25" y="200" width="325" height="45"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LSi-Yp-Ex2"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-lB-aOO">
+                                <rect key="frame" x="81" y="337.5" width="80" height="78.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="v1l-Fi-PFt"/>
+                                    <constraint firstAttribute="width" constant="80" id="yG3-dl-P8o"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="lock" catalog="system"/>
+                                <connections>
+                                    <action selector="encode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKN-nU-6ga"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Y-JC-fqI">
+                                <rect key="frame" x="81" y="139" width="229" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8C-hc-Dbu">
+                                <rect key="frame" x="216" y="337.5" width="80" height="78.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AKx-Bm-KGZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="N90-dk-Myw"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="lock.open" catalog="system"/>
+                                <connections>
+                                    <action selector="decode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCB-MC-ZwU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uhr-lB-aOO" firstAttribute="baseline" secondItem="A8C-hc-Dbu" secondAttribute="baseline" id="AWA-Uw-oum"/>
+                            <constraint firstItem="P1I-bu-YHc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="DQj-m8-rrB"/>
+                            <constraint firstItem="uhr-lB-aOO" firstAttribute="firstBaseline" secondItem="A8C-hc-Dbu" secondAttribute="firstBaseline" id="Hdc-cg-Uyb"/>
+                            <constraint firstItem="A8C-hc-Dbu" firstAttribute="leading" secondItem="uhr-lB-aOO" secondAttribute="trailing" constant="55" id="Hgo-70-pHN"/>
+                            <constraint firstItem="uhr-lB-aOO" firstAttribute="leading" secondItem="y6Y-JC-fqI" secondAttribute="leading" id="NFA-v2-0te"/>
+                            <constraint firstItem="y6Y-JC-fqI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="139" id="OGH-nb-yz3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P1I-bu-YHc" secondAttribute="trailing" constant="25" id="Sb6-Ub-8xH"/>
+                            <constraint firstItem="uhr-lB-aOO" firstAttribute="top" secondItem="P1I-bu-YHc" secondAttribute="bottom" constant="92" id="TBC-k0-mgO"/>
+                            <constraint firstItem="P1I-bu-YHc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="gNU-E9-17v"/>
+                            <constraint firstItem="uhr-lB-aOO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="kfj-x4-p0R"/>
+                            <constraint firstItem="P1I-bu-YHc" firstAttribute="top" secondItem="y6Y-JC-fqI" secondAttribute="bottom" constant="8" id="ou5-wY-AAt"/>
+                            <constraint firstItem="A8C-hc-Dbu" firstAttribute="top" secondItem="P1I-bu-YHc" secondAttribute="bottom" constant="92" id="pHQ-yX-apW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6Y-JC-fqI" secondAttribute="trailing" constant="65" id="xAX-B9-f7N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="formField" destination="P1I-bu-YHc" id="bnK-10-ABf"/>
+                        <outlet property="lbl" destination="y6Y-JC-fqI" id="RUR-tB-bDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lock" catalog="system" width="64" height="64"/>
+        <image name="lock.open" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
