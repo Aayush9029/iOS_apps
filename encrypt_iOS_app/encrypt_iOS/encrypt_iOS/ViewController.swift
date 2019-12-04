@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
 //        city is for later when i add search location thingy
 
-        guard let weatherRequestURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?APPID=bc491408821cc43317006173fd1c5bef&units=metric&lat=" + String(lat) + "&lon=" + String(lon)) else {print("err in url");return}
+        guard let weatherRequestURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?APPID=XXXXXXXXXXXXXXXXXXXXXXXXXXX&units=metric&lat=" + String(lat) + "&lon=" + String(lon)) else {print("err in url");return}
         
         print(weatherRequestURL)
             //    let weatherRequestURL = URL(string: "\  }
