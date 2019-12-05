@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
 //        city is for later when i add search location thingy
 
-        guard let weatherRequestURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?APPID=XXXXXXXXXXXXXXXXXXXXXXXXXXX&units=metric&lat=" + String(lat) + "&lon=" + String(lon)) else {print("err in url");return}
+        guard let weatherRequestURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?APPID=XXXXXXXXXXXXXXXXXXXX&units=metric&lat=" + String(lat) + "&lon=" + String(lon)) else {print("err in url");return}
         
         print(weatherRequestURL)
             //    let weatherRequestURL = URL(string: "\  }
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                                             let pressure = data[12].split(separator: ":")[1]
                                //             print(pressure)
                                            DispatchQueue.main.async {
-                                                       self.pressure_lbl.text =  "Pressure: " + String(Int((Float(pressure)!))) + "hPa"
+                                                       self.pressure_lbl.text =  "Pressure: " + String(Int((Float(pressure)!))) + " hPa"
                                                    }
                                    //        self.pressure_lbl.text = String(pressure)
 
@@ -124,21 +124,23 @@ class ViewController: UIViewController {
                                                            self.cloud_lbl.text =  "Chance of rain: " + String(Int((Float(clouds)!)*100)) + "%"
                                                        }
                                            
-                                           let city = data[29].split(separator: ":")[1].split(separator:"\"")[0]
+                                           let city = data[28].split(separator: ":")[1].split(separator:"\"")[0]
                                //                  print(city)
                                                  DispatchQueue.main.async {
                                                    self.city_lbl.text = String(city)
                                                              }
 
             }else{
+                print("new way because")
+                print(data[3].count)
                          let desc = (data[3]).split(separator: "\"")[2]
                 //             print(desc)
                             DispatchQueue.main.async {
                                          self.desc_lbl.text = String(desc)
                                      }
 
-                             let current_temp = data[11].split(separator: ":")[1].split(separator: "}")[0]
-                //            print(type(of:String(current_temp)))
+                             let current_temp = data[7].split(separator: ":")[2]
+                            print((current_temp))
                             DispatchQueue.main.async {
                                 self.ctlbl.text = String(Int((Float(current_temp)!))) + "°"
                             }
@@ -148,7 +150,7 @@ class ViewController: UIViewController {
                              let pressure = data[8].split(separator: ":")[1]
                 //             print(pressure)
                             DispatchQueue.main.async {
-                                        self.pressure_lbl.text =  "Pressure: " + String(Int((Float(pressure)!))) + "hPa"
+                                        self.pressure_lbl.text =  "Pressure: " + String(Int((Float(pressure)!))) + " hPa"
                                     }
                     //        self.pressure_lbl.text = String(pressure)
 
@@ -177,19 +179,36 @@ class ViewController: UIViewController {
                                             self.wind_lbl.text =  "Wind: " + String((Float(wind)!)) + " m/s"
                 
             }
+                    
+//                print(data[15].split(separator: ":"))
+                if data[15].split(separator: ":").count < 3{
+                    let clouds = data[16].split(separator: ":")[2].split(separator: "}")[0]
+                    //            print(clouds)
+                                DispatchQueue.main.async {
+                                                self.cloud_lbl.text =  "Clouds: " + String(Int((Float(clouds)!))) + "%"
+                                    let city = data[25].split(separator: ":")[1].split(separator:"\"")[0]
+                                                                   DispatchQueue.main.async {
+                                                                     self.city_lbl.text = String(city)
+                                                                               }
+                    }}else
+                    {
+                                    let clouds = data[15].split(separator: ":")[2].split(separator: "}")[0]
+                        //            print(clouds)
+                                    DispatchQueue.main.async {
+                                                    self.cloud_lbl.text =  "Clouds: " + String(Int((Float(clouds)!))) + "%"
 
+                                        let city = data[26].split(separator: ":")[1].split(separator:"\"")[0]
+                                              DispatchQueue.main.async {
+                                                self.city_lbl.text = String(city)
+                                                          }
+                                                }
+                                    
+                        
+                    }
+                    
                 
-                            let clouds = data[15].split(separator: ":")[2].split(separator: "}")[0]
-                //            print(clouds)
-                            DispatchQueue.main.async {
-                                            self.cloud_lbl.text =  "Chance of rain: " + String(Int((Float(clouds)!))*100) + "%"
-                                        }
-                            
-                            let city = data[25].split(separator: ":")[1].split(separator:"\"")[0]
-                //                  print(city)
-                                  DispatchQueue.main.async {
-                                    self.city_lbl.text = String(city)
-                                              }
+                         //
+                
 
                 
                 
