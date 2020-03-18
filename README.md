@@ -1,5 +1,5 @@
 # iOS_app
-here will be my iOS apps :)
+My iOS apps :)
 
 ---
 **Weppa (weather app)**
