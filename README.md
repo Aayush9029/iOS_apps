@@ -1,4 +1,4 @@
-# MY iOS_apps :)
+# MY opensource iOS_apps :)
 ---
 **Weppa (weather app)**
 
