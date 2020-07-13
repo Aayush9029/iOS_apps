@@ -10,5 +10,8 @@
 <img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/image/03.PNG" width="250">          <img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/image/04.PNG" width="250">
 ---
 
-### RickTheif (annoy thiefs while protecting your device)
+### Mudrai </br>
+<img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/mudrai.png" width="250">
+A ready made swift UI iOS app that gives access to gyroscope, magnetometer, barometer, altimeter data and notification center queue.
 
+*you're welcome new devs*
