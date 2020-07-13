@@ -11,8 +11,7 @@
 ---
 
 ### Mudrai </br>
-<img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/mudrai.png" width="250">             <img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/sensor.PNG
-" width="250">
+<img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/mudrai.png" width="250">             <img src="https://raw.githubusercontent.com/Aayush9029/iOS_apps/master/sensorAppDemo.png" width="250">
 
 A ready made swift UI iOS app that gives access to gyroscope, magnetometer, barometer, altimeter data and notification center queue.
 
